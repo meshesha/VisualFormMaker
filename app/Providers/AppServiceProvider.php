@@ -3,7 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Schema;
+//use Illuminate\Support\Facades\Schema;
 use App\models\Setting;
 
 class AppServiceProvider extends ServiceProvider
@@ -25,7 +25,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        if (Schema::hasTable('settings')) {
+        $filename = storage_path("installed");
+        if (file_exists($filename)) {
             config([
                 'global' => Setting::all([
                             'group','name','value'
