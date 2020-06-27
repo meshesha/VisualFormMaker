@@ -10,6 +10,7 @@
     ],
     "license": "MIT",
     "require": {
+        "meshesha/visual-form-maker": "dev-master@dev",
         "php": "^7.2.5",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^1.0",
