@@ -1,7 +1,7 @@
 {
     "name": "meshesha/visual-form-maker",
     "type": "project",
-    "description": "drag and drop form maker and manager.",
+    "description": "VisualFormMaker is web application that allowing you to build and manage simple html forms using simple drag-and-drop action.",
     "keywords": [
         "php application",
         "laravel",
