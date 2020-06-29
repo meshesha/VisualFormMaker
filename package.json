@@ -27,5 +27,8 @@
         "alertifyjs": "^1.13.1",
         "formBuilder": "^3.4.2",
         "pristinejs": "^0.1.6"
+    },
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com/"
     }
 }
