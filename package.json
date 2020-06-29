@@ -1,4 +1,27 @@
 {
+    "name": "visualformmaker",
+    "description": "VisualFormMaker is web application that allowing you to build and manage simple html forms using simple drag-and-drop action.",
+    "version": "1.0.0",
+    "main": "webpack.mix.js",
+    "directories": {
+        "test": "tests"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/meshesha/VisualFormMaker.git"
+    },
+    "keywords": [
+        "php application",
+        "laravel",
+        "form maker",
+        "form builder"
+    ],
+    "author": "Tady Meshesha",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/meshesha/VisualFormMaker/issues"
+    },
+    "homepage": "https://github.com/meshesha/VisualFormMaker#readme",
     "private": true,
     "scripts": {
         "dev": "npm run development",
