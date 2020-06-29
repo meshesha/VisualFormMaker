@@ -2,10 +2,12 @@
 /public/hot
 /storage/*.key
 /vendor
-package.json
+/test
 .env.backup
 .phpunit.result.cache
 Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+‏‏composer.json_old
+package.json
