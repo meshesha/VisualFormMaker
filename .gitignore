@@ -1,6 +1,5 @@
 /node_modules
 /public/hot
-/storage/*.key
 /test
 .env.backup
 .phpunit.result.cache
