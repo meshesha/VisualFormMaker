@@ -170,7 +170,7 @@ class EnvironmentController extends Controller
         $dsn = "mysql:host=$host";
         try{
             $dbh = new PDO($dsn, $username, $password);
-            $dbh->exec("CREATE DATABASE IF NOT EXISTS `$database_name`");
+            $dbh->exec("CREATE DATABASE IF NOT EXISTS `$databaseName`");
             return true;
         }catch (PDOException $e){
             //echo 'Connection failed: ' . $e->getMessage();
