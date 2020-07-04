@@ -11,7 +11,8 @@ VisualFormMaker is web application based on [laravel](https://github.com/laravel
 #### composer:
     composer create-project meshesha/visual-form-maker visualformmaker --no-dev
 #### manually
-    download from github releases [VisualFormMaker](https://github.com/meshesha/VisualFormMaker/releases).
+download from github releases [VisualFormMaker](https://github.com/meshesha/VisualFormMaker/releases).
+
 ## install
  * copy visualformmaker folder to the root of your web server.
  * setup web server:
