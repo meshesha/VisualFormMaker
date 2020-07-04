@@ -3,8 +3,8 @@ VisualFormMaker is web application based on [laravel](https://github.com/laravel
 
 ## Requirements
  * web server ( like iis , apache)
-  * php > 7. ^7.2.5
-  * database : sqlite, mysql, pgsql, sqlsrv (tested in MySQL version 8)
+ * php :  ^7.2.5
+ * database : sqlite, mysql, pgsql, sqlsrv (tested in MySQL version 8)
 
 ## installation
 ### download
