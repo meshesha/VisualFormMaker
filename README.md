@@ -44,7 +44,7 @@ download from github releases [VisualFormMaker](https://github.com/meshesha/Visu
     password: admin
 
 ## usage
-    * soon ..
+* soon ..
 
 ## Acknowledgments
 This project inspired by my previous project [SimplePhpFormBuilder](https://github.com/meshesha/SimplePhpFormBuilder) and [Laravel Form Builder Package](https://github.com/jazmy/laravel-formbuilder).
