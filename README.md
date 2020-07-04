@@ -30,14 +30,14 @@ download from github releases [VisualFormMaker](https://github.com/meshesha/Visu
             * The rewrite rule definitions in the web.config require the [URL Rewite](https://www.iis.net/downloads/microsoft/url-rewrite) extension. For easy installation, use the Free Web Platform Installer.
             [more details...](https://jimfrenette.com/2016/09/laravel-iis-windows-install/).
 
-        - [Setting up a Laravel project on Windows with XAMPP / WAMP](https://medium.com/@insidert/setting-up-laravel-project-on-windows-2aa7e4f080da).
+    - [Setting up a Laravel project on Windows with XAMPP / WAMP](https://medium.com/@insidert/setting-up-laravel-project-on-windows-2aa7e4f080da).
 
-        - apache: [Steps for configuring Laravel on Apache HTTP Server](https://phpraxis.wordpress.com/2016/08/02/steps-for-configuring-laravel-on-apache-http-server/)
+    - apache: [Steps for configuring Laravel on Apache HTTP Server](https://phpraxis.wordpress.com/2016/08/02/steps-for-configuring-laravel-on-apache-http-server/)
 
-    * setup database server and create database called 'visualformmaker'.
-        - note: this step is optional in MySQL.
-    * open web browser and go to to application link (e.g.: http://localhost/visualformmaker).
-    * start installation process.
+* setup database server and create database called 'visualformmaker'.
+    - note: this step is optional in MySQL.
+* open web browser and go to to application link (e.g.: http://localhost/visualformmaker).
+* start installation process.
 
 ## first time login:
     email: admin@localhost
