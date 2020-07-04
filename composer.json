@@ -57,6 +57,7 @@
         ],
         "post-create-project-cmd": [
             "@php -r \" copy('app\\helper\\installer\\EnvironmentController.php', 'vendor\\rachidlaasri\\laravel-installer\\src\\Controllers\\EnvironmentController.php');\"",
+            "@php -r \" copy('app\\helper\\installer\\EnvironmentManager.php', 'vendor\\rachidlaasri\\laravel-installer\\src\\Helpers\\EnvironmentManager.php');\"",
             "@php artisan storage:link",
             "@php artisan key:generate --ansi"
         ]

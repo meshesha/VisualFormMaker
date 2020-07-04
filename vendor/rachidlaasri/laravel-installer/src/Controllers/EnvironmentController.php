@@ -125,39 +125,32 @@ class EnvironmentController extends Controller
 
         $settings = config("database.connections.$connection");
 
-        //create db - meshesha
         $database_name = $request->input('database_name');
         $hostname = $request->input('database_hostname');
-
-        $dsn = "mysql:host=$hostname";
         $user = $request->input('database_username');
         $password = $request->input('database_password');
-        try
-        {
-            $dbh = new PDO($dsn, $user, $password);
-            $dbh->exec("CREATE DATABASE IF NOT EXISTS `$database_name`");
+        $port = $request->input('database_port');
+        if($connection == "sqlite"){
+            $database_name = database_path("$database_name.sqlite");
         }
-        catch (PDOException $e)
-        {
-            //echo 'Connection failed: ' . $e->getMessage();
-        }
-
+        $status = $this->createDatabase($connection, $hostname, $database_name, $user, $password);
+        
         config([
             'database' => [
                 'default' => $connection,
                 'connections' => [
                     $connection => array_merge($settings, [
                         'driver' => $connection,
-                        'host' => $request->input('database_hostname'),
-                        'port' => $request->input('database_port'),
-                        'database' => $request->input('database_name'),
-                        'username' => $request->input('database_username'),
-                        'password' => $request->input('database_password'),
+                        'host' => $hostname,
+                        'port' => $port,
+                        'database' => $database_name,
+                        'username' => $user,
+                        'password' => $password,
                     ]),
                 ],
             ],
         ]);
-
+        
         DB::purge();
 
         try {
@@ -165,7 +158,41 @@ class EnvironmentController extends Controller
 
             return true;
         } catch (Exception $e) {
+            //dd($e->getMessage());
             return false;
+        }
+    }
+
+    //create db - meshesha
+    private function createDatabase($type, $host, $databaseName, $username, $password)
+    {
+        switch ($type){
+            case 'sqlite':
+                try{ 
+                    if (!file_exists($databaseName)) {
+                        file_put_contents($databaseName, '');
+                    }
+                    return true;
+                } catch(Exception $exception){ 
+                    //dd($exception->getMessage()); 
+                    return false;
+                }
+                break;
+            case 'mysql':
+                $dsn = "mysql:host=$host";
+                try{
+                    $dbh = new PDO($dsn, $username, $password);
+                    $dbh->exec("CREATE DATABASE IF NOT EXISTS `$databaseName`");
+                    return true;
+                }catch (PDOException $e){
+                    //echo 'Connection failed: ' . $e->getMessage();
+                    return false;
+                }
+                return false;
+                break;
+            default:
+                return false;
+                break;
         }
     }
 }
