@@ -4,7 +4,7 @@ VisualFormMaker is web application based on [laravel](https://github.com/laravel
 ## Requirements
  * web server ( like iis , apache)
  * php :  ^7.2.5
- * database : sqlite, mysql, pgsql, sqlsrv (tested in MySQL version 8)
+ * database : sqlite, mysql, pgsql, sqlsrv (tested on MySQL version 8)
 
 ## installation
 ### download
@@ -35,7 +35,7 @@ download from github releases [VisualFormMaker](https://github.com/meshesha/Visu
     - apache: [Steps for configuring Laravel on Apache HTTP Server](https://phpraxis.wordpress.com/2016/08/02/steps-for-configuring-laravel-on-apache-http-server/)
 
 * setup database server and create database called 'visualformmaker'.
-    - note: this step is optional in MySQL.
+    - note: this step is optional in MySQL and sqlite.
 * open web browser and go to to application link (e.g.: http://localhost/visualformmaker).
 * start installation process.
 

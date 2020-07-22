@@ -128,7 +128,10 @@ class EnvironmentManager
         'MAIL_ENCRYPTION='.$request->mail_encryption."\n\n".
         'PUSHER_APP_ID='.$request->pusher_app_id."\n".
         'PUSHER_APP_KEY='.$request->pusher_app_key."\n".
-        'PUSHER_APP_SECRET='.$request->pusher_app_secret;
+        'PUSHER_APP_SECRET='.$request->pusher_app_secret."\n\n".
+        'MIX_PUSHER_APP_KEY="${PUSHER_APP_KEY}"'."\n".
+        'MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"'."\n".
+        'MIX_RESOURCE_ROOT="/visualformmaker"';
 
         try {
             file_put_contents($this->envPath, $envFileData);
